@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Welcome!</title>
+	</head>
+	<body>
+	<link rel="stylesheet" href="Styleshhet.css" type="text/css">
+	<center><img src="indexbanner.png">
+<div class="topnav">
+  <a class="active" href="Index.html">Home</a>
+  <a href="oklahomastate.html">Oklahoma State</a>
+  <a href="suu.html">SUU</a>
+  <a href="harvard.html">Harvard</a>
+<li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Official Sites</a>
+    <div class="dropdown-content">
+      <a href="http://suu.edu/">SUU</a>
+      <a href="http://go.okstate.edu/">Oklahoma State</a>
+      <a href="https://www.harvard.edu/">Harvard</a>
+    </div>
+  </li> 
+</center>
+
+<div class="heading">
+	<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="suu01.jpg" style="width:100%">
+  <div class="text">Suu Campus</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="oksu01.jpg" style="width:100%">
+  <div class="text">Oklahoma State University</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="harvard01.jpg" style="width:100%">
+  <div class="text">Harvard University</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+	<br>
+	<br>
+	<br>
+		<span class="title1">Welcome!</span>
+		<span class="title2">Follow the links on the website to view different colleges.</span>
+			
+			<button onclick ="window.location.href='Form.html'"class="Form">
+			Form
+			</button>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+		</div>
+	</body>
+</html>
